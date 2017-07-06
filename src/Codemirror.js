@@ -55,6 +55,7 @@ const CodeMirror = createReactClass({
 		this.codeMirror.on('blur', this.focusChanged.bind(this, false));
 		this.codeMirror.on('scroll', this.scrollChanged);
 		this.codeMirror.setValue(this.props.defaultValue || this.props.value || '');
+		this.codeMirror.clearHistory();
 	},
 	componentWillUnmount () {
 		// is there a lighter-weight way to remove the cm instance?
